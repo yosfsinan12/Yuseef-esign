@@ -44,8 +44,19 @@
         .subtitle-user {
             font-size: 14px;
             color: #ffcc00;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             font-weight: bold;
+        }
+        .audio-box {
+            background: #18223c;
+            border: 1px solid #233559;
+            border-radius: 14px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+        audio {
+            width: 100%;
+            height: 35px;
         }
         .app-card {
             background: #18223c;
@@ -59,6 +70,7 @@
             text-decoration: none;
             color: white;
             box-sizing: border-box;
+            cursor: pointer;
         }
         .app-left {
             display: flex;
@@ -74,6 +86,9 @@
             margin-left: 12px;
             border: 1px solid #283e6b;
             flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .app-icon img {
             width: 100%;
@@ -97,25 +112,13 @@
             border-radius: 10px;
             font-size: 14px;
             font-weight: bold;
-            text-decoration: none;
+            border: none;
+            cursor: pointer;
             box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
             flex-shrink: 0;
+            transition: 0.3s;
         }
         .install-btn:active {
-            transform: scale(0.95);
-        }
-        .get-btn {
-            background: linear-gradient(135deg, #00d2ff, #3a7bd5);
-            color: white;
-            padding: 8px 18px;
-            border-radius: 10px;
-            font-size: 14px;
-            font-weight: bold;
-            text-decoration: none;
-            box-shadow: 0 4px 10px rgba(0, 210, 255, 0.3);
-            flex-shrink: 0;
-        }
-        .get-btn:active {
             transform: scale(0.95);
         }
     </style>
@@ -131,10 +134,19 @@
         <h1>YUSEEF SURCHI VIP</h1>
         <div class="subtitle-user">yuseef_sinan</div>
 
-        <!-- دوگمەیا DNS (ڕاستەوخۆ فایلا دابەزاندنێ ل سەر هەمان وێبسایت دئینە خوارێ) -->
-        <a href="dns.mobileconfig" class="app-card">
+        <!-- بەشێ دەنگی (Audio Player) بۆ ڤێ تلاوەتێ -->
+        <div class="audio-box">
+            <div style="font-size: 13px; color: #00d2ff; margin-bottom: 5px;">قران كريم بصوت جميل جدا 🎧</div>
+            <audio controls>
+                <source src="quran.mp3" type="audio/mpeg">
+                پەنجەرا دەنگی ل دەڤ تە کار ناکەت.
+            </audio>
+        </div>
+
+        <!-- دوگمەیا DNS -->
+        <div class="app-card" onclick="startInstall('dns.mobileconfig', this)">
             <div class="app-left">
-                <div class="app-icon" style="display:flex; align-items:center; justify-content:center; background:#131c31;">
+                <div class="app-icon">
                     <svg style="width:24px;height:24px;fill:#00d2ff;" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
                 </div>
                 <div>
@@ -142,11 +154,11 @@
                     <div class="app-sub">Required for Apps</div>
                 </div>
             </div>
-            <div class="get-btn">GET</div>
-        </a>
+            <button class="install-btn" id="btn-dns">INSTALL</button>
+        </div>
 
-        <!-- دوگمەیا ESign (تثبيتا ڕاستەوخۆ) -->
-        <a href="itms-services://?action=download-manifest&url=https://yosfsinan12.github.io/Yuseef-esign/manifest.plist" class="app-card">
+        <!-- دوگمەیا ESign -->
+        <div class="app-card" onclick="startInstall('itms-services://?action=download-manifest&url=https://yosfsinan12.github.io/Yuseef-esign/manifest.plist', this)">
             <div class="app-left">
                 <div class="app-icon">
                     <img src="logo.png" alt="ESign">
@@ -156,10 +168,35 @@
                     <div class="app-sub">Moving Increasingly</div>
                 </div>
             </div>
-            <div class="install-btn">INSTALL</div>
-        </a>
+            <button class="install-btn" id="btn-esign">INSTALL</button>
+        </div>
 
     </div>
+
+    <script>
+        function startInstall(targetUrl, element) {
+            const btn = element.querySelector('.install-btn');
+            if (btn.innerText.includes('%') || btn.innerText === 'DONE') return;
+
+            let progress = 0;
+            btn.style.background = 'linear-gradient(135deg, #f59e0b, #d97706)';
+            
+            let interval = setInterval(() => {
+                progress += 5;
+                btn.innerText = progress + '%';
+                
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    btn.innerText = 'DONE';
+                    btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                    
+                    setTimeout(() => {
+                        window.location.href = targetUrl;
+                    }, 300);
+                }
+            }, 100);
+        }
+    </script>
 
 </body>
 </html>
