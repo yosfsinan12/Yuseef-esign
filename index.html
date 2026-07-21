@@ -41,17 +41,30 @@
             margin-bottom: 5px;
             color: #00d2ff;
         }
+        .subtitle-user {
+            font-size: 14px;
+            color: #ffcc00;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
         .dns-box {
             background: #1b2642;
-            padding: 12px;
+            padding: 15px;
             border-radius: 10px;
             margin: 20px 0;
-            font-size: 15px;
+            font-size: 14px;
             border: 1px dashed #00d2ff;
+            word-break: break-all;
         }
-        .dns-box span {
-            color: #ffcc00;
+        .dns-box a {
+            color: #00d2ff;
+            text-decoration: none;
             font-weight: bold;
+            display: block;
+            margin-top: 5px;
+        }
+        .dns-box a:hover {
+            text-decoration: underline;
         }
         .btn {
             display: block;
@@ -65,7 +78,6 @@
             font-weight: bold;
             margin-top: 15px;
             box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
-            transition: 0.3s;
             box-sizing: border-box;
         }
         .btn:active {
@@ -76,21 +88,19 @@
 <body>
 
     <div class="container">
-        <!-- وێنەیێ تاجێ ل دۆرەکێ (Circular) -->
         <div class="logo-container">
-            <img src="logo.png" alt="Yuseef Surchi Logo">
+            <img src="logo.png" alt="Logo">
         </div>
 
         <h1>YUSEEF SURCHI VIP</h1>
+        <div class="subtitle-user">yuseef_sinan</div>
         <p>سەرڤەرێ فەرمی بۆ ماوەیێ 1 سالێ بێ کێشە</p>
 
-        <!-- بهشا DNS -->
         <div class="dns-box">
-            DNS ئابۆقەکراو / فەرمی:<br>
-            <span>dns.yuseefsurchi.com</span>
+            لینکا DNSـا فەرمی:<br>
+            <a href="https://malazotkan-source.github.io/esign-dns/" target="_blank">https://malazotkan-source.github.io/esign-dns/</a>
         </div>
 
-        <!-- دوگمەیا دابەزاندن و اینستالکرنا eSign -->
         <a href="itms-services://?action=download-manifest&url=https://yosfsinan12.github.io/Yuseef-esign/manifest.plist" class="btn">تنزيل و تثبيت eSign (VIP)</a>
         
         <a href="repo.json" class="btn" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">وەرگرتنا فایلا Repo (JSON)</a>
