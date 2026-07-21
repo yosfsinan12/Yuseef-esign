@@ -2,243 +2,246 @@
 <html lang="ku" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YUSEEF SURCHI VIP - Manual Build</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>YUSEEF SURCHI VIP APP</title>
     <style>
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
         body {
-            background-color: #0b0f19;
+            background-color: #060913;
             color: #ffffff;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             text-align: center;
             margin: 0;
-            padding: 20px;
+            padding: 15px;
         }
-        .container {
-            max-width: 420px;
-            margin: 30px auto;
-            background: #131c31;
-            padding: 25px;
-            border-radius: 20px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-            border: 1px solid #1f2d4d;
+        .main-card {
+            max-width: 410px;
+            margin: 15px auto;
+            background: #0e1626;
+            padding: 22px;
+            border-radius: 24px;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.7);
+            border: 1px solid #1c2b4d;
         }
-        .logo-container {
-            width: 110px;
-            height: 110px;
-            margin: 0 auto 15px auto;
+        .logo-box {
+            width: 105px;
+            height: 105px;
+            margin: 0 auto 12px auto;
             border-radius: 50%;
             overflow: hidden;
             border: 3px solid #00d2ff;
-            box-shadow: 0 0 15px rgba(0, 210, 255, 0.5);
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
         }
-        .logo-container img {
+        .logo-box img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
         h1 {
-            font-size: 20px;
-            margin-bottom: 2px;
+            font-size: 19px;
+            margin: 5px 0 2px 0;
             color: #00d2ff;
         }
-        .subtitle-user {
-            font-size: 14px;
+        .username-badge {
+            font-size: 13px;
             color: #ffcc00;
             margin-bottom: 15px;
             font-weight: bold;
         }
         
-        /* Social Accounts Box */
-        .social-box {
-            background: #18223c;
-            border: 1px solid #233559;
-            border-radius: 14px;
+        /* بەشێ ناڤێن سوشیال مێدیا یێن دیزاینکری */
+        .custom-social {
+            background: #141d33;
+            border: 1px solid #21325b;
+            border-radius: 16px;
             padding: 12px;
             margin-bottom: 15px;
             text-align: right;
         }
-        .social-title {
-            font-size: 12px;
+        .social-heading {
+            font-size: 11px;
             color: #00d2ff;
             margin-bottom: 8px;
             font-weight: bold;
             text-align: center;
+            letter-spacing: 1px;
         }
-        .social-item {
+        .social-row {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: #131c31;
+            background: #0c1220;
             padding: 8px 12px;
             border-radius: 10px;
             margin-bottom: 6px;
-            border: 1px solid #1f2d4d;
+            border: 1px solid #1a2748;
         }
-        .social-name {
-            font-size: 13px;
+        .social-row:last-child {
+            margin-bottom: 0;
+        }
+        .social-text {
+            font-size: 12px;
             font-weight: bold;
             color: #ffffff;
             direction: ltr;
         }
-        .social-lbl {
-            font-size: 12px;
+        .social-label {
+            font-size: 11px;
             color: #8a9ba8;
         }
 
-        /* Audio Box */
-        .audio-box {
-            background: #18223c;
-            border: 1px solid #233559;
-            border-radius: 14px;
+        /* پلەیەرێ قورئانێ */
+        .quran-player {
+            background: #141d33;
+            border: 1px solid #21325b;
+            border-radius: 16px;
             padding: 10px;
             margin-bottom: 15px;
         }
         audio {
             width: 100%;
-            height: 35px;
+            height: 32px;
         }
 
-        /* App Cards */
-        .app-card {
-            background: #18223c;
-            border: 1px solid #233559;
-            border-radius: 14px;
-            padding: 12px 15px;
+        /* دوگمەیێن ئامێر و دابەزاندنێ */
+        .tool-btn-card {
+            background: #141d33;
+            border: 1px solid #21325b;
+            border-radius: 16px;
+            padding: 12px 14px;
             margin: 12px 0;
             display: flex;
             align-items: center;
             justify-content: space-between;
             text-decoration: none;
             color: white;
-            box-sizing: border-box;
             cursor: pointer;
         }
-        .app-left {
+        .tool-info {
             display: flex;
             align-items: center;
             text-align: right;
         }
-        .app-icon {
-            width: 48px;
-            height: 48px;
-            background: #131c31;
+        .tool-icon {
+            width: 44px;
+            height: 44px;
+            background: #0c1220;
             border-radius: 12px;
             overflow: hidden;
             margin-left: 12px;
-            border: 1px solid #283e6b;
-            flex-shrink: 0;
+            border: 1px solid #21345e;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        .app-icon img {
+        .tool-icon img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        .app-title {
-            font-size: 15px;
+        .tool-name {
+            font-size: 14px;
             font-weight: bold;
             color: #ffffff;
         }
-        .app-sub {
-            font-size: 12px;
+        .tool-sub {
+            font-size: 11px;
             color: #8a9ba8;
-            margin-top: 2px;
         }
-        .install-btn {
+        .install-action-btn {
             background: linear-gradient(135deg, #3b82f6, #1d4ed8);
             color: white;
-            padding: 8px 18px;
+            padding: 8px 16px;
             border-radius: 10px;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: bold;
             border: none;
             cursor: pointer;
-            box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
-            flex-shrink: 0;
-            transition: 0.3s;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+            transition: 0.2s;
         }
-        .install-btn:active {
+        .install-action-btn:active {
             transform: scale(0.95);
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="logo-container">
+    <div class="main-card">
+        <div class="logo-box">
             <img src="logo.png" alt="Logo">
         </div>
 
         <h1>YUSEEF SURCHI VIP</h1>
-        <div class="subtitle-user">yuseef_sinan</div>
+        <div class="username-badge">yuseef_sinan</div>
 
-        <div class="social-box">
-            <div class="social-title">📱 SOCIAL ACCOUNTS 📱</div>
+        <div class="custom-social">
+            <div class="social-heading">✨ MY CREATED ACCOUNTS ✨</div>
             
-            <div class="social-item">
-                <span class="social-name" style="color: #fffc00;">K4BOOS_SURCHI</span>
-                <span class="social-lbl">Snapchat</span>
+            <div class="social-row">
+                <span class="social-text" style="color: #fffc00;">K4BOOS_SURCHI</span>
+                <span class="social-label">Snapchat</span>
             </div>
 
-            <div class="social-item">
-                <span class="social-name" style="color: #00f2fe;">yuseef_surchi</span>
-                <span class="social-lbl">TikTok</span>
+            <div class="social-row">
+                <span class="social-text" style="color: #00f2fe;">yuseef_surchi</span>
+                <span class="social-label">TikTok</span>
             </div>
 
-            <div class="social-item">
-                <span class="social-name" style="color: #2aabee;">YUSEEF_SURCHI</span>
-                <span class="social-lbl">Telegram</span>
+            <div class="social-row">
+                <span class="social-text" style="color: #2aabee;">YUSEEF_SURCHI</span>
+                <span class="social-label">Telegram</span>
             </div>
         </div>
 
-        <div class="audio-box">
-            <div style="font-size: 13px; color: #00d2ff; margin-bottom: 5px;">قران كريم بصوت جميل جدا 🎧</div>
+        <div class="quran-player">
+            <div style="font-size: 12px; color: #00d2ff; margin-bottom: 4px;">قران كريم بصوت جميل جدا 🎧</div>
             <audio controls>
                 <source src="quran.mp3" type="audio/mpeg">
-                پەنجەرا دەنگی ل دەڤ تە کار ناکەت.
             </audio>
         </div>
 
-        <div class="app-card" onclick="startInstall('dns.mobileconfig', this)">
-            <div class="app-left">
-                <div class="app-icon">
-                    <svg style="width:24px;height:24px;fill:#00d2ff;" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        <div class="tool-btn-card" onclick="startProcess('dns.mobileconfig', this)">
+            <div class="tool-info">
+                <div class="tool-icon">
+                    <svg style="width:22px;height:22px;fill:#00d2ff;" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
                 </div>
                 <div>
-                    <div class="app-title">Download DNS Profile</div>
-                    <div class="app-sub">Required for Apps</div>
+                    <div class="tool-name">Download DNS</div>
+                    <div class="tool-sub">Required Security Tool</div>
                 </div>
             </div>
-            <button class="install-btn" id="btn-dns">INSTALL</button>
+            <button class="install-action-btn" id="b1">INSTALL</button>
         </div>
 
-        <div class="app-card" onclick="startInstall('ESIGN_LINK_HERE.ipa', this)">
-            <div class="app-left">
-                <div class="app-icon">
+        <div class="tool-btn-card" onclick="startProcess('esign.ipa', this)">
+            <div class="tool-info">
+                <div class="tool-icon">
                     <img src="logo.png" alt="ESign">
                 </div>
                 <div>
-                    <div class="app-title">ESign Official VIP</div>
-                    <div class="app-sub">Direct Download Build</div>
+                    <div class="tool-name">ESign VIP Custom</div>
+                    <div class="tool-sub">Built & Designed by Yuseef</div>
                 </div>
             </div>
-            <button class="install-btn" id="btn-esign">INSTALL</button>
+            <button class="install-action-btn" id="b2">INSTALL</button>
         </div>
 
     </div>
 
     <script>
-        function startInstall(targetUrl, element) {
-            const btn = element.querySelector('.install-btn');
+        function startProcess(targetUrl, element) {
+            const btn = element.querySelector('.install-action-btn');
             if (btn.innerText.includes('%') || btn.innerText === 'DONE') return;
 
             let progress = 0;
             btn.style.background = 'linear-gradient(135deg, #f59e0b, #d97706)';
             
             let interval = setInterval(() => {
-                progress += 5;
+                progress += 10;
                 btn.innerText = progress + '%';
                 
                 if (progress >= 100) {
@@ -250,10 +253,9 @@
                         window.location.href = targetUrl;
                     }, 300);
                 }
-            }, 100);
+            }, 90);
         }
     </script>
 
 </body>
 </html>
-
