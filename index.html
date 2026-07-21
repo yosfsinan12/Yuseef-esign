@@ -14,18 +14,18 @@
             padding: 20px;
         }
         .container {
-            max-width: 400px;
-            margin: 40px auto;
+            max-width: 420px;
+            margin: 30px auto;
             background: #131c31;
-            padding: 30px;
+            padding: 25px;
             border-radius: 20px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.5);
             border: 1px solid #1f2d4d;
         }
         .logo-container {
-            width: 130px;
-            height: 130px;
-            margin: 0 auto 20px auto;
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 15px auto;
             border-radius: 50%;
             overflow: hidden;
             border: 3px solid #00d2ff;
@@ -37,8 +37,8 @@
             object-fit: cover;
         }
         h1 {
-            font-size: 22px;
-            margin-bottom: 5px;
+            font-size: 20px;
+            margin-bottom: 2px;
             color: #00d2ff;
         }
         .subtitle-user {
@@ -47,39 +47,134 @@
             margin-bottom: 20px;
             font-weight: bold;
         }
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            background: linear-gradient(135deg, #00d2ff, #3a7bd5);
-            color: white;
+        /* ترازکنا دوگمەیان وەکی وێنەیێ تە */
+        .download-card {
+            background: #18223c;
+            border: 1px solid #233559;
+            border-radius: 14px;
+            padding: 12px 15px;
+            margin: 12px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             text-decoration: none;
-            border-radius: 12px;
-            font-size: 16px;
-            font-weight: bold;
-            margin-top: 15px;
-            box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+            color: white;
+            transition: 0.2s;
             box-sizing: border-box;
         }
-        .btn:active {
+        .download-card:active {
             transform: scale(0.98);
+            background: #1f2d4d;
+        }
+        .card-left {
+            display: flex;
+            align-items: center;
+            text-align: right;
+        }
+        .card-icon {
+            width: 42px;
+            height: 42px;
+            background: #131c31;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 12px;
+            border: 1px solid #283e6b;
+            flex-shrink: 0;
+        }
+        .card-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: #00d2ff;
+        }
+        .card-title {
+            font-size: 15px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .card-sub {
+            font-size: 12px;
+            color: #8a9ba8;
+            margin-top: 2px;
+        }
+        .download-btn-icon {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 210, 255, 0.3);
+            flex-shrink: 0;
+        }
+        .download-btn-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: #ffffff;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
+        <!-- وێنەیێ تاجێ ل دۆرەکێ (Circular) -->
         <div class="logo-container">
             <img src="logo.png" alt="Logo">
         </div>
 
         <h1>YUSEEF SURCHI VIP</h1>
         <div class="subtitle-user">yuseef_sinan</div>
-        <p>سەرڤەرێ فەرمی بۆ ماوەیێ 1 سالێ بێ کێشە</p>
 
-        <a href="https://malazotkan-source.github.io/esign-dns/" class="btn">تنزيل ملف DNS (التثبيت الفوري)</a>
-        
-        <a href="repo.json" class="btn" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">وەرگرتنا فایلا Repo (JSON)</a>
+        <!-- دوگمەیا یەکەم: تنزیلکرنا پروفایلا DNS -->
+        <a href="https://malazotkan-source.github.io/esign-dns/" class="download-card">
+            <div class="card-left">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                </div>
+                <div>
+                    <div class="card-title">Download DNS Profile</div>
+                    <div class="card-sub">Download DNS Profile (Required)</div>
+                </div>
+            </div>
+            <div class="download-btn-icon">
+                <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            </div>
+        </a>
+
+        <!-- دوگمەیا دووەم: تنزیلکرna ESign & KSign IPA -->
+        <a href="esign.ipa" class="download-card">
+            <div class="card-left">
+                <div class="card-icon" style="border-color: #3b82f6;">
+                    <svg viewBox="0 0 24 24" style="fill: #3b82f6;"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                </div>
+                <div>
+                    <div class="card-title">Download ESign & KSign</div>
+                    <div class="card-sub">Download ESign & KSign IPA</div>
+                </div>
+            </div>
+            <div class="download-btn-icon" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8);">
+                <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            </div>
+        </a>
+
+        <!-- دوگمەیا سیێ: وەرگرتنا Repo JSON -->
+        <a href="repo.json" class="download-card" style="margin-top: 15px; background: #131c31; border-color: #1f2d4d;">
+            <div class="card-left">
+                <div class="card-icon" style="border-color: #10b981;">
+                    <svg viewBox="0 0 24 24" style="fill: #10b981;"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+                </div>
+                <div>
+                    <div class="card-title" style="color: #10b981;">Repo JSON</div>
+                    <div class="card-sub">Copy Source Link for ESign/KSign</div>
+                </div>
+            </div>
+            <div class="download-btn-icon" style="background: linear-gradient(135deg, #10b981, #059669);">
+                <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+            </div>
+        </a>
+
     </div>
 
 </body>
