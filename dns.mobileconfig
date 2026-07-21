@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>aceuticalSettings</key>
+            <dict>
+                <key>ServerAddresses</key>
+                <array>
+                    <string>0.0.0.0</string>
+                </array>
+            </dict>
+            <key>PayloadDescription</key>
+            <string>yuseef_sinan DNS Configuration</string>
+            <key>PayloadDisplayName</key>
+            <string>yuseef_sinan</string>
+            <key>PayloadIdentifier</key>
+            <string>com.yuseef.dnsconfig</string>
+            <key>PayloadType</key>
+            <string>com.apple.transparentproxy.settings</string>
+            <key>PayloadUUID</key>
+            <string>7B9A3F10-5C2B-4E81-99A1-123456789ABC</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+        </dict>
+    </array>
+    <key>PayloadDescription</key>
+    <string>yuseef_sinan DNS Profile</string>
+    <key>PayloadDisplayName</key>
+    <string>yuseef_sinan</string>
+    <key>PayloadIdentifier</key>
+    <string>com.yuseef.profile.dns</string>
+    <key>PayloadOrganization</key>
+    <string>yuseef_sinan</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>1A2B3C4D-5E6F-7A8B-9C0D-123456789DEF</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>
