@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YUSEEF SURCHI VIP - Server</title>
+    <title>YUSEEF SURCHI VIP - Manual Build</title>
     <style>
         body {
             background-color: #0b0f19;
@@ -48,7 +48,7 @@
             font-weight: bold;
         }
         
-        /* بەشێ سوشیال مێدیا و ناڤێن تە */
+        /* Social Accounts Box */
         .social-box {
             background: #18223c;
             border: 1px solid #233559;
@@ -74,9 +74,6 @@
             margin-bottom: 6px;
             border: 1px solid #1f2d4d;
         }
-        .social-item:last-child {
-            margin-bottom: 0;
-        }
         .social-name {
             font-size: 13px;
             font-weight: bold;
@@ -88,6 +85,7 @@
             color: #8a9ba8;
         }
 
+        /* Audio Box */
         .audio-box {
             background: #18223c;
             border: 1px solid #233559;
@@ -99,6 +97,8 @@
             width: 100%;
             height: 35px;
         }
+
+        /* App Cards */
         .app-card {
             background: #18223c;
             border: 1px solid #233559;
@@ -167,7 +167,6 @@
 <body>
 
     <div class="container">
-        <!-- Logo -->
         <div class="logo-container">
             <img src="logo.png" alt="Logo">
         </div>
@@ -175,7 +174,6 @@
         <h1>YUSEEF SURCHI VIP</h1>
         <div class="subtitle-user">yuseef_sinan</div>
 
-        <!-- ناڤێن سوشیال مێدیا (Snapchat, TikTok, Telegram) -->
         <div class="social-box">
             <div class="social-title">📱 SOCIAL ACCOUNTS 📱</div>
             
@@ -195,7 +193,6 @@
             </div>
         </div>
 
-        <!-- بەشێ دەنگی (Audio Player) -->
         <div class="audio-box">
             <div style="font-size: 13px; color: #00d2ff; margin-bottom: 5px;">قران كريم بصوت جميل جدا 🎧</div>
             <audio controls>
@@ -204,7 +201,6 @@
             </audio>
         </div>
 
-        <!-- دوگمەیا DNS -->
         <div class="app-card" onclick="startInstall('dns.mobileconfig', this)">
             <div class="app-left">
                 <div class="app-icon">
@@ -218,15 +214,14 @@
             <button class="install-btn" id="btn-dns">INSTALL</button>
         </div>
 
-        <!-- دوگمەیا ESign -->
-        <div class="app-card" onclick="startInstall('itms-services://?action=download-manifest&url=https://yosfsinan12.github.io/Yuseef-esign/manifest.plist', this)">
+        <div class="app-card" onclick="startInstall('ESIGN_LINK_HERE.ipa', this)">
             <div class="app-left">
                 <div class="app-icon">
                     <img src="logo.png" alt="ESign">
                 </div>
                 <div>
                     <div class="app-title">ESign Official VIP</div>
-                    <div class="app-sub">Moving Increasingly</div>
+                    <div class="app-sub">Direct Download Build</div>
                 </div>
             </div>
             <button class="install-btn" id="btn-esign">INSTALL</button>
@@ -261,3 +256,4 @@
 
 </body>
 </html>
+
