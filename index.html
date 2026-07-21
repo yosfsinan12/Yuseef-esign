@@ -47,7 +47,7 @@
             margin-bottom: 20px;
             font-weight: bold;
         }
-        .download-card {
+        .app-card {
             background: #18223c;
             border: 1px solid #233559;
             border-radius: 14px;
@@ -58,61 +58,64 @@
             justify-content: space-between;
             text-decoration: none;
             color: white;
-            transition: 0.2s;
             box-sizing: border-box;
-            cursor: pointer;
         }
-        .download-card:active {
-            transform: scale(0.98);
-            background: #1f2d4d;
-        }
-        .card-left {
+        .app-left {
             display: flex;
             align-items: center;
             text-align: right;
         }
-        .card-icon {
-            width: 42px;
-            height: 42px;
+        .app-icon {
+            width: 48px;
+            height: 48px;
             background: #131c31;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            border-radius: 12px;
+            overflow: hidden;
             margin-left: 12px;
             border: 1px solid #283e6b;
             flex-shrink: 0;
         }
-        .card-icon svg {
-            width: 22px;
-            height: 22px;
-            fill: #00d2ff;
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
-        .card-title {
+        .app-title {
             font-size: 15px;
             font-weight: bold;
             color: #ffffff;
         }
-        .card-sub {
+        .app-sub {
             font-size: 12px;
             color: #8a9ba8;
             margin-top: 2px;
         }
-        .download-btn-icon {
-            width: 38px;
-            height: 38px;
-            background: linear-gradient(135deg, #4facfe, #00f2fe);
+        .install-btn {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            padding: 8px 18px;
             border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 10px rgba(0, 210, 255, 0.3);
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
             flex-shrink: 0;
         }
-        .download-btn-icon svg {
-            width: 20px;
-            height: 20px;
-            fill: #ffffff;
+        .install-btn:active {
+            transform: scale(0.95);
+        }
+        .dns-card {
+            background: #18223c;
+            border: 1px solid #233559;
+            border-radius: 14px;
+            padding: 12px 15px;
+            margin: 12px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+            color: white;
+            box-sizing: border-box;
         }
     </style>
 </head>
@@ -127,20 +130,32 @@
         <h1>YUSEEF SURCHI VIP</h1>
         <div class="subtitle-user">yuseef_sinan</div>
 
-        <!-- لێرە لینکەکا ڕاستەوخۆ یا فایلا DNSـا خۆ (یان لینکێ پەڕگەیا پروفایلێ) دانی دا ڕاستەوخۆ بێتە خوارێ -->
-        <a href="https://malazotkan-source.github.io/esign-dns/dns.mobileconfig" class="download-card">
-            <div class="card-left">
-                <div class="card-icon">
-                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        <!-- دوگمەیا DNS -->
+        <a href="https://malazotkan-source.github.io/esign-dns/" class="dns-card">
+            <div class="app-left">
+                <div class="app-icon" style="display:flex; align-items:center; justify-content:center;">
+                    <svg style="width:24px;height:24px;fill:#00d2ff;" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
                 </div>
                 <div>
-                    <div class="card-title">Download DNS Profile</div>
-                    <div class="card-sub">Download DNS Profile (Required)</div>
+                    <div class="app-title">Download DNS Profile</div>
+                    <div class="app-sub">Required for Apps</div>
                 </div>
             </div>
-            <div class="download-btn-icon">
-                <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            <div style="background:linear-gradient(135deg, #00d2ff, #3a7bd5); padding:8px 14px; border-radius:10px; font-size:13px; font-weight:bold;">Get</div>
+        </a>
+
+        <!-- تثبیتا ڕاستەوخۆ یا ESign (ب ڕێکا manifest.plist) -->
+        <a href="itms-services://?action=download-manifest&url=https://yosfsinan12.github.io/Yuseef-esign/manifest.plist" class="app-card">
+            <div class="app-left">
+                <div class="app-icon">
+                    <img src="logo.png" alt="ESign">
+                </div>
+                <div>
+                    <div class="app-title">ESign Official VIP</div>
+                    <div class="app-sub">Moving Increasingly</div>
+                </div>
             </div>
+            <div class="install-btn">INSTALL</div>
         </a>
 
     </div>
