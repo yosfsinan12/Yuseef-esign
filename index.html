@@ -3,115 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>YUSEEF SURCHI APP</title>
+    <title>YUSEEF STORE - Official App Platform</title>
     <style>
         * {
             box-sizing: border-box;
             -webkit-tap-highlight-color: transparent;
         }
         body {
-            background-color: #050811;
+            background-color: #04070f;
             color: #ffffff;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             text-align: center;
             margin: 0;
-            padding: 12px;
+            padding: 15px;
         }
-        .app-box {
-            max-width: 400px;
+        .store-container {
+            max-width: 410px;
             margin: 10px auto;
-            background: #0d1424;
-            padding: 20px;
-            border-radius: 22px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-            border: 1px solid #1a2748;
+            background: #0b111e;
+            padding: 22px;
+            border-radius: 24px;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.8);
+            border: 1px solid #182440;
         }
-        .app-logo {
-            width: 95px;
-            height: 95px;
-            margin: 0 auto 10px auto;
+        .store-logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 12px auto;
             border-radius: 50%;
             overflow: hidden;
             border: 3px solid #00d2ff;
-            box-shadow: 0 0 18px rgba(0, 210, 255, 0.5);
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
         }
-        .app-logo img {
+        .store-logo img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
         h1 {
-            font-size: 18px;
+            font-size: 19px;
             margin: 5px 0 2px 0;
             color: #00d2ff;
         }
-        .user-tag {
+        .store-tag {
             font-size: 12px;
             color: #ffcc00;
-            margin-bottom: 14px;
+            margin-bottom: 15px;
             font-weight: bold;
         }
         
-        /* Social Accounts Box */
-        .social-panel {
-            background: #131d35;
-            border: 1px solid #1f3059;
-            border-radius: 14px;
-            padding: 10px;
-            margin-bottom: 12px;
+        /* Social Media Box */
+        .creator-box {
+            background: #111a2e;
+            border: 1px solid #1d2d50;
+            border-radius: 16px;
+            padding: 12px;
+            margin-bottom: 15px;
             text-align: right;
         }
-        .panel-title {
+        .creator-title {
             font-size: 11px;
             color: #00d2ff;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             font-weight: bold;
             text-align: center;
             letter-spacing: 1px;
         }
-        .social-row {
+        .creator-row {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: #090e1b;
-            padding: 7px 10px;
-            border-radius: 8px;
-            margin-bottom: 5px;
-            border: 1px solid #172442;
+            background: #080d19;
+            padding: 8px 12px;
+            border-radius: 10px;
+            margin-bottom: 6px;
+            border: 1px solid #16223d;
         }
-        .social-row:last-child {
+        .creator-row:last-child {
             margin-bottom: 0;
         }
-        .social-val {
+        .creator-val {
             font-size: 12px;
             font-weight: bold;
             color: #ffffff;
             direction: ltr;
         }
-        .social-key {
+        .creator-key {
             font-size: 11px;
             color: #8a9ba8;
         }
 
         /* Quran Player */
-        .audio-panel {
-            background: #131d35;
-            border: 1px solid #1f3059;
-            border-radius: 14px;
-            padding: 8px;
-            margin-bottom: 12px;
+        .quran-box {
+            background: #111a2e;
+            border: 1px solid #1d2d50;
+            border-radius: 16px;
+            padding: 10px;
+            margin-bottom: 15px;
         }
         audio {
             width: 100%;
-            height: 30px;
+            height: 32px;
         }
 
-        /* Tool Cards */
-        .tool-card {
-            background: #131d35;
-            border: 1px solid #1f3059;
-            border-radius: 14px;
-            padding: 10px 12px;
+        /* App Items for Public Users to Install */
+        .section-header {
+            font-size: 13px;
+            color: #00d2ff;
+            text-align: right;
+            margin: 15px 5px 8px 5px;
+            font-weight: bold;
+        }
+        .app-item-card {
+            background: #111a2e;
+            border: 1px solid #1d2d50;
+            border-radius: 16px;
+            padding: 12px 14px;
             margin: 10px 0;
             display: flex;
             align-items: center;
@@ -120,121 +127,128 @@
             color: white;
             cursor: pointer;
         }
-        .tool-left {
+        .app-item-left {
             display: flex;
             align-items: center;
             text-align: right;
         }
-        .tool-img {
-            width: 40px;
-            height: 40px;
-            background: #090e1b;
-            border-radius: 10px;
+        .app-item-icon {
+            width: 44px;
+            height: 44px;
+            background: #080d19;
+            border-radius: 12px;
             overflow: hidden;
-            margin-left: 10px;
-            border: 1px solid #1b2c52;
+            margin-left: 12px;
+            border: 1px solid #1e3057;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        .tool-img img {
+        .app-item-icon img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        .tool-title {
-            font-size: 13px;
+        .app-item-name {
+            font-size: 14px;
             font-weight: bold;
             color: #ffffff;
         }
-        .tool-desc {
-            font-size: 10px;
+        .app-item-desc {
+            font-size: 11px;
             color: #8a9ba8;
         }
-        .run-btn {
+        .install-pub-btn {
             background: linear-gradient(135deg, #3b82f6, #1d4ed8);
             color: white;
-            padding: 7px 14px;
-            border-radius: 9px;
-            font-size: 12px;
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 13px;
             font-weight: bold;
             border: none;
             cursor: pointer;
-            box-shadow: 0 3px 10px rgba(59, 130, 246, 0.4);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
             transition: 0.2s;
         }
-        .run-btn:active {
+        .install-pub-btn:active {
             transform: scale(0.95);
         }
     </style>
 </head>
 <body>
 
-    <div class="app-box">
-        <div class="app-logo">
-            <img src="logo.png" alt="Logo">
+    <div class="store-container">
+        <!-- Logo -->
+        <div class="store-logo">
+            <img src="logo.png" alt="Store Logo">
         </div>
 
-        <h1>YUSEEF SURCHI VIP</h1>
-        <div class="user-tag">yuseef_sinan</div>
+        <h1>YUSEEF STORE VIP</h1>
+        <div class="store-tag">yuseef_sinan Platform</div>
 
-        <div class="social-panel">
-            <div class="panel-title">📱 MY SOCIAL CHANNELS 📱</div>
+        <!-- Social Media / Creator Info -->
+        <div class="creator-box">
+            <div class="creator-title">✨ DEVELOPER CHANNELS ✨</div>
             
-            <div class="social-row">
-                <span class="social-val" style="color: #fffc00;">K4BOOS_SURCHI</span>
-                <span class="social-key">Snapchat</span>
+            <div class="creator-row">
+                <span class="creator-val" style="color: #fffc00;">K4BOOS_SURCHI</span>
+                <span class="creator-key">Snapchat</span>
             </div>
 
-            <div class="social-row">
-                <span class="social-val" style="color: #00f2fe;">yuseef_surchi</span>
-                <span class="social-key">TikTok</span>
+            <div class="creator-row">
+                <span class="creator-val" style="color: #00f2fe;">yuseef_surchi</span>
+                <span class="creator-key">TikTok</span>
             </div>
 
-            <div class="social-row">
-                <span class="social-val" style="color: #2aabee;">YUSEEF_SURCHI</span>
-                <span class="social-key">Telegram</span>
+            <div class="creator-row">
+                <span class="creator-val" style="color: #2aabee;">YUSEEF_SURCHI</span>
+                <span class="creator-key">Telegram</span>
             </div>
         </div>
 
-        <div class="audio-panel">
-            <div style="font-size: 11px; color: #00d2ff; margin-bottom: 3px;">قران كريم بصوت جميل جدا 🎧</div>
+        <!-- Quran Player -->
+        <div class="quran-box">
+            <div style="font-size: 12px; color: #00d2ff; margin-bottom: 4px;">قران كريم بصوت جميل جدا 🎧</div>
             <audio controls>
                 <source src="quran.mp3" type="audio/mpeg">
             </audio>
         </div>
 
-        <div class="tool-card" onclick="runAction('dns.mobileconfig', this)">
-            <div class="tool-left">
-                <div class="tool-img">
-                    <svg style="width:20px;height:20px;fill:#00d2ff;" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        <div class="section-header">📦 AVAILABLE TOOLS & APPS</div>
+
+        <!-- Public Tool 1: DNS -->
+        <div class="app-item-card" onclick="publicInstall('dns.mobileconfig', this)">
+            <div class="app-item-left">
+                <div class="app-item-icon">
+                    <svg style="width:22px;height:22px;fill:#00d2ff;" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
                 </div>
                 <div>
-                    <div class="tool-title">DNS Security</div>
-                    <div class="tool-desc">Required Profile</div>
+                    <div class="app-item-name">DNS Security Profile</div>
+                    <div class="app-item-desc">Required for Device Setup</div>
                 </div>
             </div>
-            <button class="run-btn" id="btn-1">INSTALL</button>
+            <button class="install-pub-btn" id="p1">INSTALL</button>
         </div>
 
-        <div class="tool-card" onclick="runAction('esign.ipa', this)">
-            <div class="tool-left">
-                <div class="tool-img">
-                    <img src="logo.png" alt="ESign">
+        <!-- Public Tool 2: Custom ESign / App -->
+        <div class="app-item-card" onclick="publicInstall('esign.ipa', this)">
+            <div class="app-item-left">
+                <div class="app-item-icon">
+                    <img src="logo.png" alt="App">
                 </div>
                 <div>
-                    <div class="tool-title">ESign Custom VIP</div>
-                    <div class="tool-desc">Designed by Yuseef</div>
+                    <div class="app-item-name">ESign Yuseef VIP</div>
+                    <div class="app-item-desc">Custom Signed Tool</div>
                 </div>
             </div>
-            <button class="run-btn" id="btn-2">INSTALL</button>
+            <button class="install-pub-btn" id="p2">INSTALL</button>
         </div>
 
     </div>
 
     <script>
-        function runAction(targetUrl, element) {
-            const btn = element.querySelector('.run-btn');
+        function publicInstall(targetUrl, element) {
+            const btn = element.querySelector('.install-pub-btn');
             if (btn.innerText.includes('%') || btn.innerText === 'DONE') return;
 
             let progress = 0;
