@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>YUSEEF STORE - DNS & ESign</title>
+    <title>YUSEEF STORE - DNS & Social</title>
     <style>
         * {
             box-sizing: border-box;
@@ -30,23 +30,77 @@
             box-shadow: 0 12px 35px rgba(0,0,0,0.8);
             border: 1px solid #182440;
         }
+        .store-logo {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 12px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #00d2ff;
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+        }
+        .store-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         h1 {
-            font-size: 20px;
-            margin: 0 0 5px 0;
+            font-size: 19px;
+            margin: 5px 0 2px 0;
             color: #00d2ff;
         }
         .store-tag {
             font-size: 12px;
             color: #ffcc00;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             font-weight: bold;
         }
         .section-header {
             font-size: 13px;
             color: #00d2ff;
             text-align: right;
-            margin: 10px 5px 8px 5px;
+            margin: 15px 5px 8px 5px;
             font-weight: bold;
+        }
+        /* Social Media Box */
+        .creator-box {
+            background: #111a2e;
+            border: 1px solid #1d2d50;
+            border-radius: 16px;
+            padding: 12px;
+            margin-bottom: 15px;
+            text-align: right;
+        }
+        .creator-title {
+            font-size: 11px;
+            color: #00d2ff;
+            margin-bottom: 8px;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        .creator-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #080d19;
+            padding: 8px 12px;
+            border-radius: 10px;
+            margin-bottom: 6px;
+            border: 1px solid #16223d;
+        }
+        .creator-row:last-child {
+            margin-bottom: 0;
+        }
+        .creator-val {
+            font-size: 12px;
+            font-weight: bold;
+            color: #ffffff;
+            direction: ltr;
+        }
+        .creator-key {
+            font-size: 11px;
+            color: #8a9ba8;
         }
         .app-item-card {
             background: #111a2e;
@@ -78,11 +132,6 @@
             align-items: center;
             justify-content: center;
         }
-        .app-item-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
         .app-item-name {
             font-size: 14px;
             font-weight: bold;
@@ -103,20 +152,38 @@
             cursor: pointer;
             box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
             min-width: 80px;
-            transition: 0.2s;
-        }
-        .install-pub-btn:active {
-            transform: scale(0.95);
         }
     </style>
 </head>
 <body>
 
     <div class="store-container">
-        <h1>YUSEEF STORE VIP</h1>
-        <div class="store-tag">DNS & ESign Installer</div>
+        <div class="store-logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <h1>YUSEEF STORE</h1>
+        <div class="store-tag">DNS Security Platform</div>
 
-        <div class="section-header">📦 ACTIVE TOOLS</div>
+        <div class="creator-box">
+            <div class="creator-title">✨ DEVELOPER CHANNELS ✨</div>
+            
+            <div class="creator-row">
+                <span class="creator-val" style="color: #fffc00;">K4BOOS_SURCHI</span>
+                <span class="creator-key">Snapchat</span>
+            </div>
+
+            <div class="creator-row">
+                <span class="creator-val" style="color: #00f2fe;">yuseef_surchi</span>
+                <span class="creator-key">TikTok</span>
+            </div>
+
+            <div class="creator-row">
+                <span class="creator-val" style="color: #2aabee;">YUSEEF_SURCHI</span>
+                <span class="creator-key">Telegram</span>
+            </div>
+        </div>
+
+        <div class="section-header">📦 ACTIVE PROFILE</div>
 
         <div class="app-item-card" onclick="publicInstall('dns.mobileconfig', this)">
             <div class="app-item-left">
@@ -126,19 +193,6 @@
                 <div>
                     <div class="app-item-name">DNS Security Profile</div>
                     <div class="app-item-desc">Anti-Revoke Protection</div>
-                </div>
-            </div>
-            <button class="install-pub-btn">INSTALL</button>
-        </div>
-
-        <div class="app-item-card" onclick="publicInstall('esign.ipa', this)">
-            <div class="app-item-left">
-                <div class="app-item-icon">
-                    <img src="logo.png" alt="ESign">
-                </div>
-                <div>
-                    <div class="app-item-name">ESign Yuseef VIP</div>
-                    <div class="app-item-desc">Signing Tool</div>
                 </div>
             </div>
             <button class="install-pub-btn">INSTALL</button>
