@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>YUSEEF STORE - Official App Platform</title>
+    <title>YUSEEF STORE - DNS & ESign</title>
     <style>
         * {
             box-sizing: border-box;
@@ -16,110 +16,44 @@
             text-align: center;
             margin: 0;
             padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
         .store-container {
             max-width: 410px;
-            margin: 10px auto;
+            width: 100%;
             background: #0b111e;
-            padding: 22px;
+            padding: 25px;
             border-radius: 24px;
             box-shadow: 0 12px 35px rgba(0,0,0,0.8);
             border: 1px solid #182440;
         }
-        .store-logo {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 12px auto;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 3px solid #00d2ff;
-            box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
-        }
-        .store-logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
         h1 {
-            font-size: 19px;
-            margin: 5px 0 2px 0;
+            font-size: 20px;
+            margin: 0 0 5px 0;
             color: #00d2ff;
         }
         .store-tag {
             font-size: 12px;
             color: #ffcc00;
-            margin-bottom: 15px;
+            margin-bottom: 25px;
             font-weight: bold;
         }
-        
-        /* Social Media Box */
-        .creator-box {
-            background: #111a2e;
-            border: 1px solid #1d2d50;
-            border-radius: 16px;
-            padding: 12px;
-            margin-bottom: 15px;
-            text-align: right;
-        }
-        .creator-title {
-            font-size: 11px;
-            color: #00d2ff;
-            margin-bottom: 8px;
-            font-weight: bold;
-            text-align: center;
-            letter-spacing: 1px;
-        }
-        .creator-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: #080d19;
-            padding: 8px 12px;
-            border-radius: 10px;
-            margin-bottom: 6px;
-            border: 1px solid #16223d;
-        }
-        .creator-row:last-child {
-            margin-bottom: 0;
-        }
-        .creator-val {
-            font-size: 12px;
-            font-weight: bold;
-            color: #ffffff;
-            direction: ltr;
-        }
-        .creator-key {
-            font-size: 11px;
-            color: #8a9ba8;
-        }
-
-        /* Quran Player */
-        .quran-box {
-            background: #111a2e;
-            border: 1px solid #1d2d50;
-            border-radius: 16px;
-            padding: 10px;
-            margin-bottom: 15px;
-        }
-        audio {
-            width: 100%;
-            height: 32px;
-        }
-
-        /* App Items for Public Users to Install */
         .section-header {
             font-size: 13px;
             color: #00d2ff;
             text-align: right;
-            margin: 15px 5px 8px 5px;
+            margin: 10px 5px 8px 5px;
             font-weight: bold;
         }
         .app-item-card {
             background: #111a2e;
             border: 1px solid #1d2d50;
             border-radius: 16px;
-            padding: 12px 14px;
-            margin: 10px 0;
+            padding: 14px;
+            margin: 12px 0;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -133,8 +67,8 @@
             text-align: right;
         }
         .app-item-icon {
-            width: 44px;
-            height: 44px;
+            width: 45px;
+            height: 45px;
             background: #080d19;
             border-radius: 12px;
             overflow: hidden;
@@ -168,6 +102,7 @@
             border: none;
             cursor: pointer;
             box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+            min-width: 80px;
             transition: 0.2s;
         }
         .install-pub-btn:active {
@@ -178,45 +113,11 @@
 <body>
 
     <div class="store-container">
-        <!-- Logo -->
-        <div class="store-logo">
-            <img src="logo.png" alt="Store Logo">
-        </div>
-
         <h1>YUSEEF STORE VIP</h1>
-        <div class="store-tag">yuseef_sinan Platform</div>
+        <div class="store-tag">DNS & ESign Installer</div>
 
-        <!-- Social Media / Creator Info -->
-        <div class="creator-box">
-            <div class="creator-title">✨ DEVELOPER CHANNELS ✨</div>
-            
-            <div class="creator-row">
-                <span class="creator-val" style="color: #fffc00;">K4BOOS_SURCHI</span>
-                <span class="creator-key">Snapchat</span>
-            </div>
+        <div class="section-header">📦 ACTIVE TOOLS</div>
 
-            <div class="creator-row">
-                <span class="creator-val" style="color: #00f2fe;">yuseef_surchi</span>
-                <span class="creator-key">TikTok</span>
-            </div>
-
-            <div class="creator-row">
-                <span class="creator-val" style="color: #2aabee;">YUSEEF_SURCHI</span>
-                <span class="creator-key">Telegram</span>
-            </div>
-        </div>
-
-        <!-- Quran Player -->
-        <div class="quran-box">
-            <div style="font-size: 12px; color: #00d2ff; margin-bottom: 4px;">قران كريم بصوت جميل جدا 🎧</div>
-            <audio controls>
-                <source src="quran.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-
-        <div class="section-header">📦 AVAILABLE TOOLS & APPS</div>
-
-        <!-- Public Tool 1: DNS -->
         <div class="app-item-card" onclick="publicInstall('dns.mobileconfig', this)">
             <div class="app-item-left">
                 <div class="app-item-icon">
@@ -224,24 +125,23 @@
                 </div>
                 <div>
                     <div class="app-item-name">DNS Security Profile</div>
-                    <div class="app-item-desc">Required for Device Setup</div>
+                    <div class="app-item-desc">Anti-Revoke Protection</div>
                 </div>
             </div>
-            <button class="install-pub-btn" id="p1">INSTALL</button>
+            <button class="install-pub-btn">INSTALL</button>
         </div>
 
-        <!-- Public Tool 2: Custom ESign / App -->
         <div class="app-item-card" onclick="publicInstall('esign.ipa', this)">
             <div class="app-item-left">
                 <div class="app-item-icon">
-                    <img src="logo.png" alt="App">
+                    <img src="logo.png" alt="ESign">
                 </div>
                 <div>
                     <div class="app-item-name">ESign Yuseef VIP</div>
-                    <div class="app-item-desc">Custom Signed Tool</div>
+                    <div class="app-item-desc">Signing Tool</div>
                 </div>
             </div>
-            <button class="install-pub-btn" id="p2">INSTALL</button>
+            <button class="install-pub-btn">INSTALL</button>
         </div>
 
     </div>
@@ -255,7 +155,7 @@
             btn.style.background = 'linear-gradient(135deg, #f59e0b, #d97706)';
             
             let interval = setInterval(() => {
-                progress += 10;
+                progress += 5;
                 btn.innerText = progress + '%';
                 
                 if (progress >= 100) {
@@ -265,9 +165,9 @@
                     
                     setTimeout(() => {
                         window.location.href = targetUrl;
-                    }, 300);
+                    }, 400);
                 }
-            }, 80);
+            }, 60);
         }
     </script>
 
